@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/KATIK/css/style.css">
+    <script src="/KATIK/js/katik.js"></script>
+    <title>Katik</title>
+</head>
+<body>
+
+    <h1 class="katik">Welcome to Katik</h1>
+    <p class="p-1">
+        Hai sobat, Selamat datang di katik :]
+        <br>
+        Sebuah web apps sederhana yang berfungsi untuk menghitung luas dan keliling bangun datar
+    </p>
+
+    <div class="opsi-1">
+
+        <a href="index.html"  class="link-k">
+             <h1 class="opsi">Luas Segitiga</h1>
+        </a>
+       
+    </div>
+
+    <!-- box -->
+    <div class="box">
+
+        <h1 class="Luas">Keliling Segitiga</h1>
+
+        <img src="/KATIK/images/images/segitiga.png" alt="rumus segitiga" class="rumus">
+
+        <p class="p1">
+            Rumus keliling Segitiga yaitu : 
+        </p>
+
+        <p class="RS">
+            K = S1+ S2 +S3
+        </p>
+       
+        <p class="p2"> 
+            Di mana : 
+            <br>
+            K = Keliling 
+            <br>
+            S1 = sisi A
+            <br>
+            S2 = sisi B
+            <br>
+            S3 = sisi C
+        </p>
+
+        <hr>
+
+        <h1 class="menghitung">Hitung Keliling  Segitiga</h1>
+
+    
+        <div class="box">
+
+            <h1 class="Luas">Luas Segitiga</h1>
+
+            <label for="alas" class="atas">Panjang Alas (a):</label>
+            <input type="text" id="alas" name="alas">
+
+            <br>
+
+            <label for="tinggi" class="tinggi">Tinggi (t):</label>
+            <input type="text" id="tinggi" name="tinggi">
+
+            <div class="result">Hasil Luas:</div>
+
+            <br>
+            <div class="cont">
+                <button class="buttons" onclick="hitungLuas()">Hitung Luas Segitiga</button>
+                <button class="reset-button" onclick="risetLuas()">Riset Luas</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function hitungLuas() {
+            var alas = parseFloat(document.getElementById("alas").value);
+            var tinggi = parseFloat(document.getElementById("tinggi").value);
+            var luas = 0.5 * alas * tinggi;
+
+            var formula = "Luas Segitiga: 1/2 x " + alas + " x " + tinggi;
+
+            document.querySelector(".result").textContent = formula + " = " + luas + " cm2";
+        }
+
+        function risetLuas() {
+            document.getElementById('alas').value = '';
+            document.getElementById('tinggi').value = '';
+            document.querySelector(".result").textContent = '';
+        }
+    </script>
+</body>
+</html>
